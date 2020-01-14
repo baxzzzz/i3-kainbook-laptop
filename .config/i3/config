@@ -40,7 +40,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 client.background       $bg-color
 
 # pixel borders remove title bars completely because of compton shadows
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 3
 
 # set desktop background
 exec --no-startup-id feh --bg-fill ~/Wallpaper/field_rye_green_153604_3840x2160.jpg
@@ -48,10 +48,11 @@ exec --no-startup-id feh --bg-fill ~/Wallpaper/field_rye_green_153604_3840x2160.
 # shadows and transitions with compton
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 
+
 # i3-gaps
 # smart_borders on      # borders only if more than one container in the workspace
 # smart_gaps on         # gaps only if more than one container in the workspace
-gaps inner 5            # global gap size
+gaps inner 3            # global gap size
 
 # start apps automatically
 exec --no-startup-id /usr/bin/nm-applet
@@ -64,7 +65,7 @@ exec xrandr --output eDP-1 --brightness 0.8
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:monospace 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -168,10 +169,10 @@ set $ws3  "3: URvxt"
 set $ws4  "4: Thunderbird"
 set $ws5  "5: Telegram"
 set $ws6  "6: Skype"
-set $ws7  "7: seven"
-set $ws8  "8: eight"
-set $ws9  "9: nine"
-set $ws10 "10: ten"
+set $ws7  "7: Seven"
+set $ws8  "8: Eight"
+set $ws9  "9: Nine"
+set $ws10 "10: Ten"
 
 
 # switch to workspace
@@ -255,10 +256,11 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-        position top
-	tray_padding         3
+        status_command       i3status
+        position             top
+	#tray_output          none
 	font pango:Roboto    9
+	i3bar_command        i3bar -t
 
 	colors {
 		# whole color settings
@@ -270,7 +272,7 @@ bar {
 		focused_workspace  $grey       $white      $black
 		active_workspace   $grey       $white      $black
 		inactive_workspace $grey       $black      $white
-		urgent_workspace   $valencia   $valencia   $black
+		urgent_workspace   $valencia   $valencia   $black       
 	}
 
         # height of the bar in pixels
@@ -279,5 +281,3 @@ bar {
 
 bindsym Control+$mod+l exec --no-startup-id i3lock -i ~/lockimage.png && xrandr --output eDP-1 --brightness 0.3
 bindsym Control+$mod+s exec --no-startup-id i3lock -i ~/lockimage.png && xrandr --output eDP-1 --brightness 0.3 && systemctl suspend
-
-
