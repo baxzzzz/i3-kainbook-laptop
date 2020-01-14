@@ -14,7 +14,7 @@ urxvt.scrollBar: false
 urxvt.background: black
 urxvt.foreground: gray
 !! Font prefferenes
-urxvt.font: xft:xos4 Terminus:pixelsize=32:hinting=True
+urxvt.font: xft:xos4 Terminus:pixelsize=32:hinting=True,xft:Inconsolata Nerd Font Mono:size=32
 urxvt.boldFont: xft:xos4 Terminus:pixelsize=32:weight=bold:hinting:True
 !! Larger history limit
 urxvt.saveLines: 1000000
