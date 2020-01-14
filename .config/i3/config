@@ -279,5 +279,6 @@ bar {
         height 65
 }
 
-bindsym Control+$mod+l exec --no-startup-id i3lock -i ~/lockimage.png && xrandr --output eDP-1 --brightness 0.3
-bindsym Control+$mod+s exec --no-startup-id i3lock -i ~/lockimage.png && xrandr --output eDP-1 --brightness 0.3 && systemctl suspend
+bindsym Control+$mod+l exec --no-startup-id i3lock -i ~/.config/i3/lockimage.jpg
+bindsym Control+$mod+s exec --no-startup-id i3lock -i ~/.config/i3/lockimage.jpg && sudo s2ram
+bindsym Control+$mod+h exec --no-startup-id i3lock -i ~/.config/i3/lockimage.jpg && sudo bash -c "echo disk > /sys/power/state"
