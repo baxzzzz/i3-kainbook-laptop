@@ -43,7 +43,7 @@ client.background       $bg-color
 for_window [class="^.*"] border pixel 3
 
 # set desktop background
-exec --no-startup-id feh --bg-fill ~/Wallpaper/field_rye_green_153604_3840x2160.jpg
+exec --no-startup-id feh --bg-fill ~/.config/i3/background.png
 
 # shadows and transitions with compton
 exec --no-startup-id compton --config ~/.config/compton.conf -b
@@ -279,6 +279,6 @@ bar {
         height 65
 }
 
-bindsym Control+$mod+l exec --no-startup-id i3lock -i ~/.config/i3/lockimage.jpg
-bindsym Control+$mod+s exec --no-startup-id i3lock -i ~/.config/i3/lockimage.jpg && sudo s2ram
-bindsym Control+$mod+h exec --no-startup-id i3lock -i ~/.config/i3/lockimage.jpg && sudo bash -c "echo disk > /sys/power/state"
+bindsym Control+$mod+l exec --no-startup-id i3lock -i ~/.config/i3/lock.png
+bindsym Control+$mod+s exec --no-startup-id i3lock -i ~/.config/i3/lock.png && sudo s2ram
+bindsym Control+$mod+h exec --no-startup-id i3lock -i ~/.config/i3/lock.png && sudo bash -c "echo disk > /sys/power/state"
